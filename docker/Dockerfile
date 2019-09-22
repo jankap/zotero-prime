@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 
 # Update the base image
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y upgrade && apt-get -y apt-utils
 
 # Setup PHP5
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install software-properties-common
